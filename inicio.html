@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo</title>
+    <link rel="stylesheet" href="inicio.css">
+    <script src="https://kit.fontawesome.com/e910ef30b6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+          <div class="navbar__toggle" id="mobile-menu" style="font-size: 0.5rem;" >
+            <i class="fas fa-user fa-5x"></i>
+          </div>
+          <ul id="navbar__menu">
+            <li class="navbar__item">
+              <p class="navbar__links" id="usuário">Email :</a>
+                <p class="navbar__links" id="email"></p>
+            </li>
+            <li class="navbar__btn" onclick="deslogar()">
+              <button id="deslogar">Deslogar</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1 class="titulo">
+        Bem vind@<p id=nome></p>
+      </h1>
+      <br><br><br>
+    <div class="label-btn">
+    <button id="btn1" onclick="entrada()">Entrada de dados</button>
+    <button id="btn2" onclick="geracao()">Geração de preço</button>
+</div>
+      <div id="tabelas">
+    <div id="main">
+    <div class="teste">
+        <p class="label">Impostos . . . . . . . . . . . . . . . . . . . . . . . % </p>
+        <p id="imposto" class="input"></p>
+        </div>
+        <br><br>
+        <div class="teste">
+        <p> Despesas fixas . . . . . . . . . . . . . . . . . . $<p>
+        <p id="despFixas">
+        </div>
+        <br><br>
+        <div class="teste">
+        <p >Despesas variaveis . . . . . . . . . . . . . . % <p>
+        <p id="despVariaveis">
+        </div>
+        <br><br>
+        <div class="teste">
+        <p > Estimativa de venda (kwh) . . . . . . . . <p>
+        <p id="estVenda">
+        </div>
+        <br><br>
+        <div class="teste">
+        <p> Investimento total . . . . . . . . . . . . . . . $<p>
+        <p id="investimento">
+        </div>
+        <br><br>
+        <div class="teste">
+        <p> Custo kwh. . . . . . . . . . . . . . . . . . . . . . $<p>
+        <p id="kwh">
+        </div>
+    </div>
+    <div id="preços">
+        <table id="tbPreços" >
+            <thead>
+                <tr>
+                    <th class="lista">Código</th>
+                    <th class="lista">Margem líquida (%)</th>
+                    <th class="lista">Preço de venda($)</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    </div>
+      <script>
+      const menu = document.getElementById("mobile-menu");
+      const menuLinks = document.getElementById('navbar__menu');
+      var jsonUsuarios = window.localStorage.getItem('usuarios');
+      var usuarios = JSON.parse(jsonUsuarios);
+      var jsonEntrada = window.localStorage.getItem("entrada");
+      var entrada = JSON.parse(jsonEntrada);
+      var jsonVenda = window.localStorage.getItem("venda");
+      var venda = JSON.parse(jsonVenda);
+
+     // Display Mobile Menu
+     const mobileMenu = () => {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+    };
+
+    menu.addEventListener('click', mobileMenu);
+    // mostrando o nome do usuário e seu email  //
+    document.getElementById("nome").innerHTML = usuarios.nome
+    document.getElementById("email").innerHTML = usuarios.email
+    
+    // tabela de dados //
+    if(localStorage.entrada != []){
+    document.getElementById("imposto").innerHTML = entrada.imposto;
+    document.getElementById("despFixas").innerHTML = entrada.despFixas ;
+    document.getElementById("despVariaveis").innerHTML = entrada.despVariaveis;
+    document.getElementById("estVenda").innerHTML = entrada.estVenda;
+    document.getElementById("investimento").innerHTML = entrada.investimento;
+    document.getElementById("kwh").innerHTML = entrada.custo ;
+    }
+    
+    // tabela preços e margem//
+    // tabela preços e margem//
+    function renderItem(jsonVenda) {
+      valores = document.getElementById("tbPreços");
+         var qtdlLinhas = valores.rows.length;
+         var linha = valores.insertRow(qtdlLinhas);
+         var cellCodigo = linha.insertCell(0);
+         var cellMargem = linha.insertCell(1);
+         var cellCalculo = linha.insertCell(2);
+
+        cellCodigo.innerHTML = qtdlLinhas;
+        cellMargem.innerHTML = jsonVenda.margem;
+        cellCalculo.innerHTML = jsonVenda.calculo;
+    }
+
+    function listar() {
+      if(localStorage.venda != []){
+        const venda = JSON.parse(localStorage.getItem('venda'));
+        venda.forEach(jsonVenda => renderItem(jsonVenda));
+         }
+    }
+
+    listar();
+      
+     </script>
+     <script src="entrada.js"></script>
+</body>
+<footer>
+    <div class="footer__container">
+    </section>
+    </div>
+  </footer>
+</html>
