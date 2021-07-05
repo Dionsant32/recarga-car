@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="cadastro.js"></script>
+</head>
+<body>
+    <div id="main-container">
+        <h1>Cadastre suas informações:</h1>
+            <div class="label-float">
+                <input type="email" id="email" placeholder="" required>
+                <label id="labelEmail"for="email">Email</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="nome" placeholder="" required>
+                <label id="labelNome"for="name">Nome/Razão Social</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="cpf" placeholder="" required>
+                <label id="labelCpf for="cpf">CPF/CNPJ</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="telefone" placeholder="" required>
+                <label id="labelTelefone" for="telefone">Telefone</label>
+            </div>
+            <div class="label-float">
+                <input type="address"  id="endereço" placeholder="" required>
+                <label id="labelEndereço" for="endereço">Endereço</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="bairro" placeholder="" required> 
+                <label id="labelBairro" for="bairro">Bairro</label>
+              </div>
+            <div class="label-float">
+                <input type="text" id="Município" placeholder="" required>
+                <label id="labelMunicípio" for="município">Município</label>
+            </div>
+            <div class="label-float">
+                <input type="password" id="password" placeholder="" required>
+                <label id="labelPassword" for="password">Senha</label>
+            </div>
+            <div class="label-float">
+                <input type="password" id="passconfirmation" placeholder="" required>
+                <label id="labelPassconfirmation" for="passconfirmation">Confirmação senha</label>
+            </div>
+
+            <div class="label-float">
+               <button onclick="salvar();">Cadastrar</button>
+       </div>
+       <div class="label-float">
+        <p><a href="login.html">Já tem cadastro?</a></p>
+</div>
+    </div>
+</body>
+</html>
