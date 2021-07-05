@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+  }
+  /* Menu */
+  .navbar {
+    background: #4CA1AF;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #C4E0E5);
+    background: linear-gradient(to right,#4CA1AF, #C4E0E5 );
+    height: 60px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center; 
+  }
+  #navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+  }
+  .navbar__btn {
+    background: #4CA1AF;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #C4E0E5);
+    background: linear-gradient(to right,#4CA1AF, #C4E0E5 );
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    padding: 6px 0px 0px 100px;
+    height: 50px;
+    width: 300px;
+    margin-left: 200px;
+  }
+  
+   #deslogar {
+    position: relative;
+    font-size: 24px;
+    z-index: 2;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .navbar__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    transition: all 0.30s;
+    border-radius: 4px;
+  }
+  
+  .navbar__btn:hover {
+    color: #fff;
+  }
+  
+  .navbar__btn:hover:after {
+    width: 100%;
+  }
+  
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
+    }
+  
+    #navbar__menu {
+      display: grid;
+      grid-template-columns: auto;
+      right: 0px;
+      width: 100%;
+      position: absolute;
+      top: -1000px;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    #navbar__menu.active {
+      background: #7FBCC6;
+      top: 100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      width: 50%;
+      height: 40vh;
+      font-size: 1.6rem;
+    }
+    .fa-user {
+      position: absolute;
+      right: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .navbar__item {
+      width: 100%;
+    }
+    .navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 2rem;
+     width: 100%;
+    }
+    #mobile-menu {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      transform: translate(5%, 20%);
+    }
+   /* Titulo */
+   .titulo{
+     display: inline-flex;
+     font-size: 50px;
+     margin-left: 30px;
+     margin-top: 20px;
+   }
+   #nome{
+     padding-left: 10px;
+   }
+   /* Tabela dados */
+   #main{
+    background-color:#C4E0E5 ;
+    outline:solid 1px #000;
+    width: fit-content;
+    line-height: 30px;
+    font-size: 24px;
+    padding: 10px 10px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+ .teste{
+   display: inline-flex;
+ }
+/* Tabela de preços */
+#preços{
+  background-color:#C4E0E5 ;
+  border:solid 1px #000;
+  width: fit-content;
+  font-size: 24px;
+  display: inline-flex;
+  padding: 10px 20px;
+  margin-left: 100px;
+}
+#tabelas{
+  display: inline-flex;
+  align-items: center;
+  margin-left: 100px;
+  pointer-events: none;
+}
+/**/
+#btn1 , #btn2{
+  background-color: #C4E0E5;
+  color:#000;
+  justify-content: center;
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  cursor: pointer;  
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px solid #323232;
+  padding: 10px ;
+  margin-top: 80px;
+  margin-left: 170px;
+  display: inline-flex;
+  outline: none;
+  transition: all .4s ease-out;
+}
+#btn1:hover , #btn2:hover{
+background-color: #1AD6FF;
+}
+#btn2{
+  margin-left: 400px;
+}
+footer {
+background: #4CA1AF;
+background: -webkit-linear-gradient(to right, #4CA1AF, #C4E0E5);
+background: linear-gradient(to right,#4CA1AF, #C4E0E5 );
+height: 40px;
+display: flex;
+position: sticky;
+width: 100%;
+}
