@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geração de preço</title>
+    <link rel="stylesheet" href="geração.css">
+</head>
+<body>
+    <nav class="navbar">
+    </nav>
+    <div id="fPreços">
+        <form>
+            <div class="form">
+                <label for="txtMargem">Margem líquida</label>
+                <input type="text" id="margem" >
+            </div>
+            <div class="form2">
+                <label for="txtPreço">Preço de venda Kwh (R$)</label>
+                <p id="preço"> </p>
+            </div>
+        </form>
+    </div>
+    <br><br><br>
+    <div id="main">
+        <table id="tbPreços" >
+            <thead>
+                <tr>
+                    <th class="lista">Código</th>
+                    <th class="lista">Margem líquida (%)</th>
+                    <th class="lista">Preço de venda($)</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br><br><br>
+    <div class="label-btn">
+        <button id="btn1" onclick="calcular()">Calcular</button>
+        <button id="btn2" onclick="entrada()">Voltar</button>
+        <button id="btn3" onclick="inicio()">Início</button>
+    </div>
+<footer>
+        <div class="footer__container">
+        </section>
+        </div>
+</footer>
+    <script>
+     // tabela preços e margem//
+     var jsonVenda = window.localStorage.getItem("venda");
+     var venda = JSON.parse(jsonVenda);
+     
+     function renderItem(jsonVenda) {
+      valores = document.getElementById("tbPreços");
+         var qtdlLinhas = valores.rows.length;
+         var linha = valores.insertRow(qtdlLinhas);
+         var cellCodigo = linha.insertCell(0);
+         var cellMargem = linha.insertCell(1);
+         var cellCalculo = linha.insertCell(2);
+
+        cellCodigo.innerHTML = qtdlLinhas;
+        cellMargem.innerHTML = jsonVenda.margem;
+        cellCalculo.innerHTML = jsonVenda.calculo;
+    }
+
+    function listar() {
+      if(localStorage.venda != []){
+        const venda = JSON.parse(localStorage.getItem('venda'));
+        venda.forEach(jsonVenda => renderItem(jsonVenda));
+         }
+    }
+
+    listar();
+</script>
+<script src="entrada.js"></script>
+</body>
+</html>
