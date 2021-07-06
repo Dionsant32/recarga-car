@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Dados</title>
+    <link rel="stylesheet" href="entrada.css">
+    <script src="entrada.js"></script>
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <h1 class="titulo">
+        Entrada de dados:
+      </h1>
+      <br>
+    <div id="main">
+     <div>
+         <label id="labelImposto" for="imposto">Impostos (%):</label>
+         <input type="text" id="imposto" placeholder="">
+         <br>
+         <div>
+             <label id="labelFixas" for="fixas"> Despepesas fixas ($):</label>
+             <input type="text" id="despFixas" placeholder="">
+            </div>
+            <br>
+            <div>
+                <label id="labelvariaveis" for="variaveis">Despesas variaveis (%):</label>
+                <input type="text" id="despVariaveis" placeholder="">
+             </div>
+             <br>
+             <div>
+                 <label id="labelestVenda" for="estVenda"> Estimativa de venda (Kwh):</label>
+                 <input type="text" id="estVenda" placeholder="">
+                </div>
+                <br>
+                <div>
+                    <label id="labelinvestimento" for="investimento"> Investimento total ($):</label>
+                    <input type="text" id="investimento" placeholder="">
+                    <br>
+                </div>
+                <br>
+                <div>
+                    <label id="labelkw" for="kwh"> Custo kwh ($):</label>
+                    <input type="text" id="kwh" placeholder="">
+                    <br>
+                </di>
+                <br>
+     </div>
+     <br><br>
+            <div>
+            <div class="label-btn1">
+                <div>
+                    <button id="btn1" onclick="gravar()">Calcular</button>
+                    <button id="btn2" onclick="inicio()">Início</button>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+</body>
+<footer>
+    <div class="footer__container">
+    </section>
+    </div>
+  </footer>
+</html>
