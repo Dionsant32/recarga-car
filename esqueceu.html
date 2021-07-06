@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entrar</title>
+        <link rel="stylesheet" href="esqueceu.css">
+        <script src="cadastro.js"></script>
+    </head>
+    <body>
+        <div id="main-container">
+            <h1>Esqueceu a senha?</h1>
+                <div class="label-float">
+                    <input type="email" id="email" placeholder="" required>
+                    <label id="labelEmail"for="email">Email</label>
+                </div>
+                <div class="label-float">
+                        <input type="nome" id="nome" placeholder="" required>
+                        <label id="labelNome"for="nome">Nome</label>
+                </div>
+                <div id= "mostrarSenha" style="display: none">
+                    <div class="label-float">
+                    <input type="password" id="password" placeholder="" >
+                    <label id="labelPassword"for="password">Senha</label>
+                    </div>
+                </div>
+                <div class="">
+                    <button onclick ="mostrarSenha();" >Mostrar senha</button>
+                </div>
+                <div class="">
+                    <button onclick="voltar()">Voltar</button>
+                </div>
+        </div>
+    </body>
+</html>
