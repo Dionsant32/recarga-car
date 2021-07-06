@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    border: none;
+}
+.label-float input{
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    border-radius: 0;
+    
+  }
+  
+  .label-float{
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .label-float input:focus{
+    border-bottom: 2px solid #fff;
+  }
+  
+  .label-float label{
+    color: #0d009c;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+  }
+  
+  .label-float input:focus + label,
+  .label-float input:valid + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #4038a0
+  }
+
+body {
+    padding-top: 5vh;
+    background-size: cover;
+    background-position-y: -150px;
+    background-color:#8C99B9;
+}
+
+#main-container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #D2DBF2;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+input {
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+
+button{
+    background-color: #fff;
+    color:#0d009c;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    margin: auto;   
+    font-weight: bold;
+    font-size: .8rem;
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+    display: block;
+    outline: none;
+    width: 100%;
+    transition: all .4s ease-out;
+}
+button:hover{
+    background-color: #8C99B9;
+    color: #FFF;
+  }
+  p :hover{
+      color: #0d009c;
+  }
